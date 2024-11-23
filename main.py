@@ -43,7 +43,7 @@ def visualize_cache():
     for character_name, data in search_cache.items():
         timestamps.append(data["timestamp"])
         results.append(character_name)
-        details.append(data["data"].split("\n")[0])  # First line (character name)
+        details.append(data["data"].split("\n")[0])  #first line (character name)
 
     #create plot
     fig, ax = plt.subplots(figsize=(10, 6))
@@ -57,7 +57,7 @@ def visualize_cache():
     ax.set_title("Cached Searches")
     ax.set_xlabel("Searches (Ordered by Time)")
     ax.set_ylabel("Character Names")
-    ax.invert_yaxis()  # Show most recent at the top
+    ax.invert_yaxis()  #show most recent at the top
     plt.tight_layout()
     plt.show()
 
