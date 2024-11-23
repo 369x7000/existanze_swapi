@@ -106,7 +106,7 @@ Contributions are welcome! Feel free to fork this repository and submit pull req
 
 ## License
 
-This project is licensed under the [MIT License](https://github.com/369x7000/existanze_swapi/blob/main/LICENSE).
+This project is licensed under the [MIT License](https://github.com/369x7000/existanze_swapi/blob/main/MIT%20License).
 
 
 ---
