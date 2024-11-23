@@ -74,7 +74,8 @@ Height: 172 cm
 Mass: 77 kg
 Birth Year: 19BBY
 
-Homeworld ----------------
+Homeworld
+----------------
 Name: Tatooine
 Population: 200000
 On Tatooine, 1 year on Earth is 1.09 years and 1 day is 0.83 days.
