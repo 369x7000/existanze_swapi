@@ -1,4 +1,3 @@
-```markdown
 # Star Wars SWAPI
 
 This Python application allows users to interact with the **Star Wars API (SWAPI)** to search for information about Star Wars characters, including optional details about their homeworld. The tool also supports caching search results locally and visualizing them.
