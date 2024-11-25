@@ -111,4 +111,3 @@ This project is licensed under the [MIT License](https://github.com/369x7000/exi
 ## Acknowledgments
 
 - [Star Wars API (SWAPI)](https://www.swapi.tech) for the data.
-```
