@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 
 
 CACHE_FILE = "search_cache.json"
-#load existing cache
+#load existing cache / read
 try:
     with open(CACHE_FILE, "r") as f:
         search_cache = json.load(f)
@@ -14,7 +14,7 @@ except (FileNotFoundError, json.JSONDecodeError):
     search_cache = {}
 
 def save_cache():
-    #save
+    #save / write
     with open(CACHE_FILE, "w") as f:
         json.dump(search_cache, f, indent=4)
 
@@ -104,7 +104,7 @@ def search(character_name, include_world=False):
             save_cache()
             print("\n".join(result_output))
         else:
-            print("The force is not strong within you. No results found.")
+            print("The force is not strong within you.")
     except requests.exceptions.RequestException as e:
         print(f"Failed to connect to the API: {e}")
     except KeyError as e:
@@ -158,3 +158,4 @@ if __name__ == "__main__":
             clean()
         elif args.visualize:
             visualize_cache()
+
