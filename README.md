@@ -31,7 +31,7 @@ pip install requests matplotlib
 
 ```bash
 git clone https://github.com/369x7000/existanze_swapi.git
-cd sexistanze_swapi
+cd existanze_swapi
 ```
 
 ### Run the Application
