@@ -1,73 +1,75 @@
-Here’s an example of a README file for your project:
+```markdown
+# Star Wars SWAPI
 
----
-
-# Star Wars API Character Search Tool
-
-This is a Python command-line tool that lets you search for information about Star Wars characters using the [Star Wars API (SWAPI)](https://swapi.dev/). The tool includes a caching mechanism to store and visualize previous searches, along with optional homeworld data.
-
----
+This Python application allows users to interact with the **Star Wars API (SWAPI)** to search for information about Star Wars characters, including optional details about their homeworld. The tool also supports caching search results locally and visualizing them.
 
 ## Features
 
-- **Character Search:** Look up information about Star Wars characters such as name, height, mass, and birth year.
-- **Homeworld Details:** Include additional information about the character's homeworld (population, orbital period, and rotation period).
-- **Caching:** Stores previous search results for faster retrieval and offline access.
-- **Cache Management:**
-  - Clear the cache.
-  - Visualize cached searches using a horizontal bar plot.
-
----
+- **Character Search**: Look up information about Star Wars characters.
+- **Homeworld Information**: Include optional details about a character's homeworld.
+- **Caching**: Saves search results locally to reduce redundant API calls.
+- **Cache Management**:
+  - Clear cached results.
+  - Visualize cached results with a bar plot.
 
 ## Prerequisites
 
-Before running this tool, ensure you have the following installed:
+Before using the tool, ensure you have the following installed:
 
-- Python 3.7+
-- Required Python packages: `matplotlib`, `argparse`, and `requests`
+- Python 3.7 or later
+- `requests`
+- `matplotlib`
 
-Install the dependencies using:
-```bash
-pip install -r requirements.txt
-```
-
----
-
-## Usage
-
-Run the script from the command line using the following options:
-
-### Character Search
+You can install the required packages using `pip`:
 
 ```bash
-python star_wars_search.py search <character_name> --world
+pip install requests matplotlib
 ```
 
-- Replace `<character_name>` with the full or partial name of the character you want to search.
+## How to Use
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/369x7000/existanze_swapi.git
+cd sexistanze_swapi
+```
+
+### Run the Application
+
+The tool is command-line based. Use the following commands to perform various actions:
+
+#### 1. Search for a Character
+
+```bash
+python main.py search <character_name> [--world]
+```
+
+- Replace `<character_name>` with the name of the character (e.g., `Luke Skywalker`).
 - Use the `--world` flag to include homeworld details.
 
-Example:
+**Example:**
 ```bash
-python star_wars_search.py search "Luke Skywalker" --world
+python main.py search 'Luke Skywalker' --world
 ```
 
-### Cache Management
+#### 2. Manage the Cache
 
-#### Clear the Cache
+- **Clear the Cache:**
+
 ```bash
-python star_wars_search.py cache --clean
+python main.py cache --clean
 ```
 
-#### Visualize the Cache
+- **Visualize the Cache:**
+
 ```bash
-python star_wars_search.py cache --visualize
+python main.py cache --visualize
 ```
 
----
+### Examples of Outputs
 
-## Example Output
-
-### Search Result
+#### Character Search
 ```plaintext
 Name: Luke Skywalker
 Height: 172 cm
@@ -78,40 +80,36 @@ Homeworld
 ----------------
 Name: Tatooine
 Population: 200000
-On Tatooine, 1 year on Earth is 1.09 years and 1 day is 0.83 days.
+On Tatooine, 1 year on Earth is 0.95 years and 1 day is 1.01 days.
 ```
 
-### Cache Visualization
-A bar chart will be displayed showing the cached searches with timestamps and a summary of the character names.
+#### Cache Visualization
+Displays a horizontal bar plot of cached searches, ordered by time, with details and timestamps.
 
----
+## Project Structure
 
-## Code Structure
+```
+.
+├── main.py          # Main script for the application
+├── search_cache.json # Local cache file (auto-created)
+└── README.md         # Documentation
+```
 
-- **`search_cache.json`:** File used to store cached search results.
-- **Functions:**
-  - `search`: Fetch character details from SWAPI.
-  - `fetch_homeworld`: Retrieve homeworld details from SWAPI.
-  - `clean`: Clear the cache.
-  - `visualize_cache`: Generate a bar chart of cached searches.
-- **Command-line Arguments:** Managed using `argparse` for flexible functionality.
+## Limitations
 
----
+- Requires internet access to fetch data from the SWAPI.
+- The homeworld visualization is dependent on the structure and availability of API data.
 
-## Contributions
+## Future Enhancements
 
-Contributions are welcome! Feel free to fork this repository and submit pull requests for new features or bug fixes.
-
----
+- Add support for more Star Wars data, such as starships or vehicles.
+- Improve the visualization for cached data with additional insights.
 
 ## License
 
 This project is licensed under the [MIT License](https://github.com/369x7000/existanze_swapi/blob/main/MIT%20License).
 
-
----
-
 ## Acknowledgments
 
-- [SWAPI](https://swapi.dev/) for providing the Star Wars data.
-- Python libraries: `requests`, `argparse`, `matplotlib`.
+- [Star Wars API (SWAPI)](https://www.swapi.tech) for the data.
+```
